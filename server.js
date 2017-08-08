@@ -10,7 +10,7 @@ var storage = multer.diskStorage({
     cb(null, file.originalname.replace(path.extname(file.originalname), "") + '-' + Date.now() + path.extname(file.originalname))
   }
 })
-
+console.log("creare folder");
 var upload = multer({ storage: storage })
 
 app.use(express.static(path.join(__dirname, 'public')));
