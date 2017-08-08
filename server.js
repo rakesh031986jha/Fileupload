@@ -7,7 +7,7 @@ var multer  = require('multer');
 var storage = multer.diskStorage({
   destination: './uploads/',
   filename: function (req, file, cb) {
-    cb(null, file.originalname.replace(path.extname(file.originalname), "") + '-' + Date.now() + path.extname(file.originalname))
+    cb(null, file.originalname.replace(path.extname(file.originalname), "") + path.extname(file.originalname))
   }
 })
 console.log("creare folder");
